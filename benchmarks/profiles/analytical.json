@@ -1,0 +1,1 @@
+{"seed":42,"scales":[100000,1000000,10000000],"queries":["B01","B06","B06-filter","B07","B09"],"samples":30,"mode":"sequential_simple_query","note":"P0 smoke profile; statistical and concurrency gates remain pending"}

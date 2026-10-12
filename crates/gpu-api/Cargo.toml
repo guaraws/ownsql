@@ -1,0 +1,4 @@
+[package]
+name = "gpu-api"
+version.workspace = true
+edition.workspace = true

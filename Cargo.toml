@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = ["crates/server", "crates/executor", "crates/storage", "crates/gpu-api", "crates/bench"]
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+[workspace.dependencies]
+anyhow = "=1.0.100"
+tokio = { version = "=1.48.0", features = ["full"] }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.145"
+clap = { version = "=4.5.51", features = ["derive"] }
+datafusion = { version = "=50.3.0", default-features = false, features = ["datetime_expressions", "string_expressions"] }
+tracing = "=0.1.41"
+tracing-subscriber = { version = "=0.3.20", features = ["env-filter"] }
+[profile.dev]
+debug = 0
+incremental = false
+[profile.test]
+debug = 0
+incremental = false
+[profile.release]
+debug = 0
+lto = "thin"

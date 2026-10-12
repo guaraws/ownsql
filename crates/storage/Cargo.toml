@@ -1,0 +1,7 @@
+[package]
+name = "storage"
+version.workspace = true
+edition.workspace = true
+[dependencies]
+anyhow.workspace = true
+rocksdb = { version = "=0.24.0", default-features = false, features = ["bindgen-runtime"] }
